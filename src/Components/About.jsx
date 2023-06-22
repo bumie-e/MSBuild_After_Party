@@ -16,7 +16,7 @@ import React from "react";
  * Need an image? Check out https://unsplash.com to download a image you
  * freely use on your site.
  */
-import image from "../images/motion-background.jpg";
+import image from "../images/cl-bg.jpg";
 
 const imageAltText = "purple and blue abstract background";
 
@@ -24,19 +24,27 @@ const imageAltText = "purple and blue abstract background";
  * Sort description that expands on your title on the Home component.
  */
 const description =
-  "I'm a UI/UX student studying at Barnett Technical University. I enjoy creating unique and simplistic user interfaces in creative ways.";
-
+  "Discover the future of AI at our Microsoft Build After Party event. Join us at Obafemi Awolowo University for an immersive gathering centered on Azure OpenAI service, ML, and Cognitive Services. Engage with two inspiring speakers and three esteemed panelists, alongside 70 passionate attendees. Don't miss this exceptional opportunity to expand your knowledge, network, and be part of the AI revolution.";
+const description2 = "Sign up today to secure your spot!";
+const description3 = "Sign up today to start learning!";
 /**
  * List of some of skills or technologies you work on, are learning,
  * passionate about, or enjoy,
  */
 const skillsList = [
-  "Web design",
-  "User experience",
-  "Inclusive design",
-  "Focus group testing",
-  "Mobile user interfaces",
-  "Graphic design",
+  "Azure OpenAI service",
+  "Azure ML",
+  "Azure Cognitive Services",
+];
+
+const schedule = [
+  "10:00am to 10:30am - Registration",
+  "10:30am to 11:00am - Welcome and Introduction",
+  "11:00am to 11:30am - Keynote Speaker",
+  "11:30am to 12:30pm - Panel Discussion",
+  "12:30pm to 1:00pm - Speaker Session",
+  "1:00pm to 1:30pm - Networking and Open Discussion",
+  "1:30pm to 2:00pm - QnA and Closing Remarks",
 ];
 
 /**
@@ -44,8 +52,6 @@ const skillsList = [
  * how you best work, or even a quote. This will help someone learn more
  * about you on a professional level.
  */
-const detailOrQuote =
-  "I am passionate about solving problems in new creative ways to drive innovation. By leveraging my UI/UX experience I continually look for new and better ways to make tech accessible by all.";
 
 const About = () => {
   return (
@@ -60,9 +66,10 @@ const About = () => {
           textAlign: "center",
         }}
       >
-        <h2>About Myself</h2>
+        <h2>About Event</h2>
         <p className="large">{description}</p>
         <hr />
+        <h2>Highlights</h2>
         <ul
           style={{
             textAlign: "left",
@@ -77,7 +84,30 @@ const About = () => {
           ))}
         </ul>
         <hr />
-        <p style={{ padding: "1rem 3rem 0" }}>{detailOrQuote}</p>
+        <h2>Schedule</h2>
+        <ul
+          style={{
+            textAlign: "left",
+            columns: 2,
+            fontSize: "1.25rem",
+            margin: "2rem 3rem",
+            gap: "3rem",
+          }}
+        >
+          {schedule.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+        <p style={{ padding: "1rem 3rem 0" }}>{description2}</p>
+        <a href="https://forms.office.com/r/TckmfjmkaR">
+          <button type="button">Register Now!</button>
+          </a>
+        <hr />
+        <h2>Cloud Skills Challenge</h2>
+        <p style={{ padding: "1rem 3rem 0" }}>{description3}</p>
+        <a href="https://aka.ms/msbuild-lc-h192">
+          <button type="button">Register Here</button>
+          </a>
       </div>
     </section>
   );
